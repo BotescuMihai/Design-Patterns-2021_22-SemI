@@ -20,10 +20,19 @@ public class Paragraph implements Element{
 		printt();
 	}
 
-	@Override
+    @Override
 	public void add(Element e) {
 		// TODO Auto-generated method stub
+		try {
+		if(els.contains(e))
+			{throw new Exception("The following cannot be added, because it is already in the list: ");
+			}}catch(Exception e1) {
+				e1.printStackTrace();
+				e.print();
+				return;
+			}
 		this.els.add(e);
+		
 	}
 
 	@Override
